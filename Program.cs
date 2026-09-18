@@ -1,27 +1,19 @@
 ﻿using System;
-
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Console.Write("Nhap so luong phan tu: ");
-        int n = int.Parse(Console.ReadLine());
-
-        int[] a = new int[n];
-
-        for (int i = 0; i < n; i++)
+        Console.Write("nhap chuoi : ");
+        String chuoi = Console.ReadLine();
+        int dem = 0;
+        for (int i = 0;i<chuoi.Length;i++)
         {
-            Console.Write("Nhap phan tu thu " + (i + 1) + ": ");
-            a[i] = int.Parse(Console.ReadLine());
+            if(!char.IsWhiteSpace(chuoi[i]) && !char.IsPunctuation(chuoi[i]))
+            {
+                dem++;
+            }
         }
-
-        int sum = 0;
-
-        for (int i = 0; i < n; i++)
-        {
-            sum += a[i];
-        }
-
-        Console.WriteLine("Tong cac phan tu = " + sum);
+        Console.WriteLine("so luong ki tu la : "+ dem);
+         
     }
 }

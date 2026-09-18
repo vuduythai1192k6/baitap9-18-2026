@@ -1,19 +1,22 @@
-﻿using System;
+﻿
+using System;
+
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("nhap chuoi : ");
-        String chuoi = Console.ReadLine();
+        Console.Write("Nhap chuoi: ");
+        string chuoi = Console.ReadLine();
+
         int dem = 0;
-        for (int i = 0;i<chuoi.Length;i++)
+        Console.Write("Nhap ky tu : ");
+        char a = Console.ReadLine()[0];
+        for (int i = 0; i < chuoi.Length; i++)
         {
-            if(!char.IsWhiteSpace(chuoi[i]) && !char.IsPunctuation(chuoi[i]))
-            {
+            if (chuoi[i] == a)
                 dem++;
-            }
         }
-        Console.WriteLine("so luong ki tu la : "+ dem);
-         
+        Console.Write("So lan xuat hien cua " + a + " la : " + dem);
     }
 }
+
